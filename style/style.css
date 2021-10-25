@@ -10,21 +10,30 @@ Add more images to the home
 
 
 body{
-    background-color: #fff;
+    background-color: #d1abe6;
     margin: 0%;
     font-family: sans-serif;
 }
 
 
+nav .dark-logo-img{
+    display: none !important;
+}
+
+nav .light-logo-img{
+    display: block;
+}
+
 nav{
     overflow: hidden;
     position: sticky;
     position: -webkit-sticky;
+    width: 100%;
     top: 0;
     z-index: 100;
     background-color: rgba(255,255,255,0);
-    background: linear-gradient(to bottom, #d1abe6, #dfc0f0  70%, #0000 );
-    transition: background .5s;
+    background: linear-gradient(to bottom, #d1abe6, #d1abe6  70%, #d1abe6  );
+    
     
 }
 
@@ -40,7 +49,17 @@ nav a{
 }
 
 nav.scrolled {
-    background: #d1abe6 !important;
+    background: linear-gradient(to bottom, #d1abe6, #d1abe6  70%, #d1abe6  );
+    transition: background .5s;
+    background: #7f7884 !important;
+}
+
+nav.scrolled .dark-logo-img{
+    display: block !important;
+}
+
+nav.scrolled .light-logo-img{
+    display: none;
 }
 
 nav .icon {
@@ -133,7 +152,7 @@ footer{
     height: auto;
     width: 99%;
     padding: 10px;
-    background: #d1abe6;
+    background: #7f7884;
 }
 
 footer a{
@@ -191,7 +210,7 @@ footer a{
     margin: 20px;
     height: 200px;
     width: 270px;
-    background-color: #d1abe6;
+    background-color: #f9eeff;
     margin-left: 20px;
     margin-right: 5px;
     border-radius: 25px;
@@ -203,9 +222,205 @@ footer a{
     margin: 20px;
     height: 200px;
     width: 270px;
-    background-color: #d1abe6;
+    background-color: #f9eeff;
     margin-top: 20px;
     margin-left: 20px;
     margin-right: 5px;
     border-radius: 25px;
+}
+
+.premium-container{
+    position: relative;
+}
+
+.premium-container img{
+    max-width: 100%;
+    height: auto;
+    display: grid;
+    margin: 0;
+    opacity: 80%;
+}
+
+.buttons-premium-background{
+    position: absolute;
+    top: 300px;
+    left: 50px;
+}
+.buttons-premium-background img{
+    position: absolute;
+    top: -200px;
+    width: 250px;
+    height: auto;
+}
+
+.premium-title{
+    font-family: sans-serif;
+    font-size: 24px;
+    color: #f9eeff;
+}
+
+.premium-description{
+    font-family: sans-serif;
+    font-size: 18px;
+    color: #f9eeff;
+    margin: 0;
+}
+.year-price{
+    width: 230px;
+    height: 40px;
+    margin: 40px;
+    border: none;
+    border-radius: 25px;
+    color:#f9eeff;
+    background-color: #7f7884;
+    font-size: 18px;
+    text-align: center;
+}
+#savings{
+    font-size: 10px;
+    color: #d1abe6;
+}
+
+.month-price{
+    width: 230px;
+    height: 40px;
+    margin: auto;
+    border: none;
+    border-radius: 25px;
+    color: #f9eeff;
+    background-color: #7f7884;
+    font-size: 18px;
+    text-align: center;
+}
+
+.premium-perks{
+    position: relative;
+    left: 50px;
+    
+}
+
+.perk-title{
+    left: 40px;
+    font-family: sans-serif;
+    font-size: 24px;
+    color: #f9eeff;
+}
+
+.perk{
+    font-size: 16px;
+    text-align: center;
+    float: left;
+    margin: 20px;
+    height: 200px;
+    width: 270px;
+    color: #7f7884;
+    background-color: #f9eeff;
+    margin-left: 20px;
+    margin-right: 5px;
+    border-radius: 25px;
+}
+
+.perk-mtitle{
+    top: 10px;
+}
+
+/* Login page */
+
+.login-container{
+    position: relative;
+}
+
+.login-container img{
+    max-width: 100%;
+    height: auto;
+    display: grid;
+    margin: 0;
+}
+
+.login{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 380px;
+    overflow: hidden;
+    margin: auto;
+    margin-bottom: 100px;
+    margin: 20 0 0 450px;
+    padding: 80px;
+    background: #d1abe6;
+    border-radius: 15px;
+}
+
+#login-label{
+    color: white;
+    font-size: 18px;
+}
+
+#Username{
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+#Pass{
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+#log{
+    width: 100px;
+    height: 30px;
+    margin: auto;
+    border: none;
+    border-radius: 10px;
+    color: #dfc0f0;
+}
+
+#login-span{
+    color: white;
+    font-size: 18px;
+}
+
+#login-a{
+    float: right;
+    color: rgb(139, 134, 143);
+}
+
+/* Status page */
+
+.status-container{
+    position: relative;
+}
+
+.status-container img{
+    max-width: 100%;
+    height: auto;
+    display: grid;
+    margin: 0;
+}
+
+.status{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 680px;
+    overflow: hidden;
+    margin: auto;
+    margin-bottom: 100px;
+    margin: 20 0 0 450px;
+    padding: 80px;
+    background: #d1abe6;
+    border-radius: 15px;
+}
+
+#status-label{
+    color: white;
+    font-size: 18px;
 }
