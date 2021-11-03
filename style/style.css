@@ -413,3 +413,11 @@ footer a{
     padding-left: 10px;
 }
 
+/* Support page */
+
+.sup-warning{
+    position: relative;
+    font-size: 16px;
+    color: white;
+    left: 50px;
+}
