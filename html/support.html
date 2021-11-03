@@ -34,7 +34,7 @@ Make the rest of the html pages
 
         </nav>
     <!-- END NAVBAR -->
-    <!-- X PAGE -->
+    <!-- SUPPORT PAGE -->
     <div class="general-container">
         <!-- 1Qk2_FhqMfok7SZtGazNdI4sGbwJBwIkb (new) -->
         <!-- 170HZIiYWMrC5zOiQEL46Lqx192fouPV4 (old) -->
@@ -55,14 +55,24 @@ Make the rest of the html pages
                 <br>
                 <textarea name="message" id="message" placeholder="Your Message"></textarea>
                 <br><br>
-                <button type="button" name="submit" id="submit" value="Submit" onclick="show()">Submit</button>
+                <button name="submit" id="submit" value="Submit" onclick="show()">Submit</button>
                 <br><br>
             </form>
         </div>
     </div>
+
+    <div class="general-container">
+        <p style="font-size: 18px;" class="sup-warning">Support Q/A:</p>
+        <p class="sup-warning">How long will it take to get a reply for my Ticket?</p>
+        <p class="sup-warning"> Reply times may vary depending on what is the issue and how backed up the Team is with Tickets. Thank you for your patience!</p>
+        <br>
+        <p class="sup-warning">Do I send a Ticket if I find a bug?</p>
+        <p class="sup-warning"> Yes! Please let us know in the messages the steps to recreating it to help our team work faster!</p>
+        <br>
+    </div>
   
 
-    <!-- END X PAGE -->
+    <!-- END SUPPORT PAGE -->
  <!-- FOOTER -->
  <footer class="home-footer">
     <section class="home-footer-1">
@@ -151,7 +161,7 @@ function myFunction() {
         var name = document.getElementById("name").value;
         var email = document.getElementById("email").value;
         var message = document.getElementById("message").value;
-        var api = "PLACEHOLDER URL"
+        var api = "https://c3raidgiel.execute-api.us-east-1.amazonaws.com/Dev/calendarevents"
 
         var params = {
             "name":name,
