@@ -51,6 +51,10 @@ Make the rest of the html pages
                 <br>
                 <input type="text" name="email" id="email" placeholder="Email">
                 <br><br>
+                <label id="gen-label">Your Username*</label>
+                <br>
+                <input type="text" name="username" id="Username" placeholder="Username">
+                <br><br>
                 <label id="gen-label">Your message</label>
                 <br>
                 <textarea name="message" id="message" placeholder="Your Message"></textarea>
@@ -160,12 +164,14 @@ function myFunction() {
     function show(){
         var name = document.getElementById("name").value;
         var email = document.getElementById("email").value;
+        var username = document.getElementById("username").value;
         var message = document.getElementById("message").value;
         var api = "https://c3raidgiel.execute-api.us-east-1.amazonaws.com/Dev/calendarevents"
 
         var params = {
             "name":name,
             "email":email,
+            "username":username,
             "message":message
         };
         var xhttp = new XMLHttpRequest();
@@ -178,6 +184,7 @@ function myFunction() {
         var a = xhttp.send(JSON.stringify(params));
         document.getElementById("name").value = '';
         document.getElementById("email").value = '';
+        document.getElementById("username").value = '';
         document.getElementById("message").value = '';
     }
 

@@ -34,20 +34,31 @@ Make the rest of the html pages
 
         </nav>
     <!-- END NAVBAR -->
-    <!-- X PAGE -->
+    <!-- FEEDBACK PAGE -->
     <div class="general-container">
         <!-- 1Qk2_FhqMfok7SZtGazNdI4sGbwJBwIkb (new) -->
         <!-- 170HZIiYWMrC5zOiQEL46Lqx192fouPV4 (old) -->
         <!-- 1iOvKpWAuMgOoChhWYpsg-NO63xfAFv-7 -->
         <img class="status-background" src="https://drive.google.com/uc?export=view&id=1iOvKpWAuMgOoChhWYpsg-NO63xfAFv-7" alt="Login Background"> 
         <div class="container-1">
-                <label id="status-label">Feedback Placeholder</label>
-                
+            <form>
+                <p style="font-size: 20px;" id="gen-label">Feedback Form</p>
+                <label id="gen-label">Your Username*</label>
+                <br>
+                <input type="text" name="username" id="Username" placeholder="Username">
+                <br><br>
+                <label id="gen-label">Your Feedback</label>
+                <br>
+                <textarea name="message" id="message" placeholder="Your Feedback of this App..."></textarea>
+                <br><br>
+                <button name="submit" id="submit" value="Submit" onclick="show()">Submit</button>
+                <br><br>
+            </form>
         </div>
     </div>
   
 
-    <!-- END X PAGE -->
+    <!-- END FEEDBACK PAGE -->
  <!-- FOOTER -->
  <footer class="home-footer">
     <section class="home-footer-1">
@@ -129,5 +140,29 @@ function myFunction() {
         navbar.classList.remove('scrolled')
     }
 }
+</script>
+
+<script>
+    function show(){
+        var username = document.getElementById("username").value;
+        var message = document.getElementById("message").value;
+        var api = "https://c3raidgiel.execute-api.us-east-1.amazonaws.com/Dev/calendarevents"
+
+        var params = {
+            "username":username,
+            "message":message
+        };
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200){
+                alert(xhttp.responseText);
+            }
+        };
+        xhttp.open("POST", api, false);
+        var a = xhttp.send(JSON.stringify(params));
+        document.getElementById("username").value = '';
+        document.getElementById("message").value = '';
+    }
+
 </script>
 </html>
