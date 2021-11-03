@@ -35,14 +35,29 @@ Make the rest of the html pages
         </nav>
     <!-- END NAVBAR -->
     <!-- X PAGE -->
-    <div class="status-container">
+    <div class="general-container">
         <!-- 1Qk2_FhqMfok7SZtGazNdI4sGbwJBwIkb (new) -->
         <!-- 170HZIiYWMrC5zOiQEL46Lqx192fouPV4 (old) -->
         <!-- 1iOvKpWAuMgOoChhWYpsg-NO63xfAFv-7 -->
         <img class="status-background" src="https://drive.google.com/uc?export=view&id=1iOvKpWAuMgOoChhWYpsg-NO63xfAFv-7" alt="Login Background"> 
-        <div class="status">
-                <label id="status-label">Support Placeholder</label>
-                
+        <div class="container-1">
+            <form>
+                <p style="font-size: 20px;" id="gen-label">Support Form</p>
+                <label id="gen-label">Your name*</label>
+                <br>
+                <input type="text" name="name" id="name" placeholder="Full Name">
+                <br><br>
+                <label id="gen-label">Your email*</label>
+                <br>
+                <input type="text" name="email" id="email" placeholder="Email">
+                <br><br>
+                <label id="gen-label">Your message</label>
+                <br>
+                <textarea name="message" id="message" placeholder="Your Message"></textarea>
+                <br><br>
+                <button type="button" name="submit" id="submit" value="Submit" onclick="show()">Submit</button>
+                <br><br>
+            </form>
         </div>
     </div>
   
@@ -129,5 +144,32 @@ function myFunction() {
         navbar.classList.remove('scrolled')
     }
 }
+</script>
+
+<script>
+    function show(){
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var message = document.getElementById("message").value;
+        var api = "PLACEHOLDER URL"
+
+        var params = {
+            "name":name,
+            "email":email,
+            "message":message
+        };
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200){
+                alert(xhttp.responseText);
+            }
+        };
+        xhttp.open("POST", api, false);
+        var a = xhttp.send(JSON.stringify(params));
+        document.getElementById("name").value = '';
+        document.getElementById("email").value = '';
+        document.getElementById("message").value = '';
+    }
+
 </script>
 </html>

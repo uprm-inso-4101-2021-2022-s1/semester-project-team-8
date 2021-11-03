@@ -202,32 +202,20 @@ footer a{
     padding-left: 20px;
 }
 
+.general-container{
+    position: relative;
+}
+
+.general-container img{
+    max-width: 100%;
+    height: auto;
+    display: grid;
+    margin: 0;
+}
+
 
 
 /* Premium page */
-.square{
-    float: left;
-    margin: 20px;
-    height: 200px;
-    width: 270px;
-    background-color: #f9eeff;
-    margin-left: 20px;
-    margin-right: 5px;
-    border-radius: 25px;
-  
-}
-
-.square2{
-    float: left;
-    margin: 20px;
-    height: 200px;
-    width: 270px;
-    background-color: #f9eeff;
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 5px;
-    border-radius: 25px;
-}
 
 .premium-container{
     position: relative;
@@ -306,6 +294,12 @@ footer a{
     color: #f9eeff;
 }
 
+.premium-perks-2{
+    position: relative;
+    left: 50px;
+    clear: both;
+}
+
 .perk{
     font-size: 16px;
     text-align: center;
@@ -326,18 +320,7 @@ footer a{
 
 /* Login page */
 
-.login-container{
-    position: relative;
-}
-
-.login-container img{
-    max-width: 100%;
-    height: auto;
-    display: grid;
-    margin: 0;
-}
-
-.login{
+.container-1{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -352,7 +335,7 @@ footer a{
     border-radius: 15px;
 }
 
-#login-label{
+#gen-label{
     color: white;
     font-size: 18px;
 }
@@ -394,33 +377,39 @@ footer a{
 
 /* Status page */
 
-.status-container{
-    position: relative;
+
+/* Support page */
+
+#name{
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    padding-left: 10px;
 }
 
-.status-container img{
-    max-width: 100%;
-    height: auto;
-    display: grid;
-    margin: 0;
+#email{
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    padding-left: 10px;
 }
 
-.status{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 680px;
-    overflow: hidden;
+#submit{
+    width: 100px;
+    height: 30px;
     margin: auto;
-    margin-bottom: 100px;
-    margin: 20 0 0 450px;
-    padding: 80px;
-    background: #d1abe6;
-    border-radius: 15px;
+    border: none;
+    border-radius: 10px;
+    color: #dfc0f0;
 }
 
-#status-label{
-    color: white;
-    font-size: 18px;
+#message{
+    width: 300px;
+    height: 150px;
+    border: none;
+    border-radius: 10px;
+    padding-left: 10px;
 }
+
