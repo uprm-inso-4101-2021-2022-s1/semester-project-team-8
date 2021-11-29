@@ -15,6 +15,13 @@ body{
     font-family: sans-serif;
 }
 
+hr {
+    border       : solid #e0e0e0;
+    border-width : 1px 0 0;
+    clear        : both;
+    margin       : 2.4rem 0 1.6rem;
+    height       : 0;
+}
 
 nav .dark-logo-img{
     display: none !important;
@@ -335,6 +342,21 @@ footer a{
     border-radius: 15px;
 }
 
+.container-2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 780px;
+    overflow: hidden;
+    margin: auto;
+    margin-bottom: 100px;
+    margin: 20 0 0 450px;
+    padding: 80px;
+    background: #d1abe6;
+    border-radius: 15px;
+}
+
 #gen-label{
     color: white;
     font-size: 18px;
@@ -421,3 +443,99 @@ footer a{
     color: white;
     left: 50px;
 }
+
+/* Calendar page*/
+
+.caledar{
+    width: 780px;
+    box-shadow: 0 8px 48px rgba(0,0,0,0.4);
+}
+
+.month{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    text-align: center;
+    text-shadow: 0 4.8px 8px rgba(0,0,0,0.5);
+}
+
+.month i{
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.month h1{
+    color: white;
+    font-size: 24px;
+    font-weight:400;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+}
+
+.month p{
+    color: white;
+    font-size: 18px;
+}
+
+.weekdays{
+    width: 100%;
+    height: 80px;
+    padding: 0 6px;
+    display: flex;
+    align-items: center;
+}
+
+.weekdays div{
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    width: calc(707px/7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 4.8px 8px rgba(0,0,0,0.5);
+}
+
+.days {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3px;
+}
+
+.days div{
+    color: white;
+    font-size: 16px;
+    margin: 5px;
+    width: calc(650px / 7);
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 4.8px 8px rgba(0,0,0,0.5);
+    transition: background-color 0.2s;
+    border-radius: 10px;
+}
+
+.days div:hover:not(today){
+    background-color: #b08fc6;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.prev-date,
+.next-date {
+  opacity: 0.5;
+}
+
+.today {
+  background-color: #7f7884;
+  border-radius: 10px;
+}
+
